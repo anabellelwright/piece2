@@ -10,6 +10,28 @@ img.style.marginTop = '-66px';
 img.style.height = '200px';
 document.body.appendChild(img);
   
+var dots = [];
+for (var i = 0; i < 5; i++) {
+  var dot = document.createElement('div');
+  dot.style.position = 'absolute';
+  dot.style.width = '10px';
+  dot.style.height = '10px';
+  dot.style.backgroundColor = '#000000';
+  dot.style.borderRadius = '5px';
+  document.body.appendChild(dot);
+  dots.push(dot);
+}
+var t = 0;
+setInterval(function() {
+  for (var i = 0; i < dots.length; i++) {
+    var dot = dots[i];
+    var angle = Math.PI * 2 * (i / dots.length) + t;
+    dot.style.left = (50 + Math.cos(angle) * 30) + '%';
+    dot.style.top = (50 + Math.sin(angle) * 30) + '%';
+  }
+  t += 0.05;
+}, 20);
+  
 </script>
 
 
