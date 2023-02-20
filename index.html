@@ -1,5 +1,9 @@
+
+
+<body>
 <h1>
 <script>
+
 var img = document.createElement('img');
 img.src = 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/rockcms/2021-12/Chidiebere-Ibe-te-211210-aa70d0.jpg';
 img.style.position = 'absolute';
@@ -9,13 +13,28 @@ img.style.marginLeft = '-280px';
 img.style.marginTop = '-66px';
 img.style.height = '200px';
 document.body.appendChild(img);
+
   
 var dots = [];
 for (var i = 0; i < 5; i++) {
-  var dot = document.createElement('div');
+  var dot = document.createElement('img');
+  dot.src = 'https://media.giphy.com/media/S8TPesOR2AFgwiOcLU/giphy.gif';
   dot.style.position = 'absolute';
-  dot.style.width = '10px';
-  dot.style.height = '10px';
+  dot.style.width = '70px';
+  dot.style.height = '70px';
+  dot.style.position = 'absolute';
+  dot.style.backgroundColor = '#000000';
+  dot.style.borderRadius = '5px';
+  document.body.appendChild(dot);
+  dots.push(dot);
+
+for (var i = 1; i < 5; i++)
+  var dot = document.createElement('img');
+  dot.src = 'https://media.giphy.com/media/3hgjgnD5FcwPbFr9zi/giphy.gif';
+  dot.style.position = 'absolute';
+  dot.style.width = '70px';
+  dot.style.height = '70px';
+  dot.style.position = 'absolute';
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
@@ -37,3 +56,5 @@ setInterval(function() {
 
 
 </h1>
+  
+</body>
