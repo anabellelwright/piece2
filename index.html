@@ -114,6 +114,24 @@ for (var i = 1; i < 5; i++)
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);  
+ 
+  
+  var portImage = document.createElement('img');
+	portImage.src = 'transpImage.png';
+ 	portImage.style.position = 'absolute';
+	portImage.style.left = '710px';
+	portImage.style.top = '63%';
+	portImage.style.marginTop = '-290px';
+  portImage.style.width = '230px';
+  portImage.style.height = '70px';
+	document.body.appendChild(portImage);
+  dot.addEventListener('click', function() {
+  portImage.style.display = 'block';
+  portImage.onclick = function() {
+  document.body.removeChild(portImage);
+    };
+  document.body.appendChild(portImage);
+	});
   dots.push(dot);
 
   
@@ -137,7 +155,7 @@ for (var i = 2; i < 5; i++)
 	foodImage.style.left = '2px';
 	foodImage.style.top = '118%';
 	foodImage.style.marginTop = '-290px';
-  foodImage.style.width = '260px';
+  foodImage.style.width = '290px';
   foodImage.style.height = '120px';
 	document.body.appendChild(foodImage);
   dot.addEventListener('click', function() {
