@@ -1,34 +1,42 @@
 <body>
+
+
+
   
 <h1>
+  
+  
 <script>
 
 var title = document.createElement('div');
 title.innerHTML = '"Social Determinants of Health"';
-title.style.fontSize = '33px';
+title.style.fontSize = '23px';
 title.style.fontFamily = 'Radikal-medium';
 title.style.textDecoration = 'line-through'; 
 document.body.appendChild(title)
 
-var line = document.createElement('div');
-line.innerHTML = 'My Life';
-line.style.fontSize = '47px'
-line.style.position = 'absolute';
-line.style.left = '44%'
-line.style.top = '11%'
-document.body.appendChild(line);
-  
+
+// var line = document.createElement('div');
+// line.innerHTML = 'Life';
+// line.style.fontSize = '47px'
+// line.style.position = 'absolute';
+// line.style.fontFamily = 'Gochi Hand';
+// line.style.left = '44%'
+// line.style.top = '11%'
+// document.body.appendChild(line);
+
 
   
   
-document.body.style.backgroundColor = '#6E15A4'; 
+  
+document.body.style.backgroundColor = '#F6F3E7'; 
 
 var img = document.createElement('img');
 img.src = 'black-fetus.png';
 img.style.position = 'absolute';
 img.style.left = '50%';
 img.style.top = '50%';
-img.style.backgroundColor = '#6E15A4'; 
+img.style.backgroundColor = '#F6F3E7'; 
 img.style.marginLeft = '-120px';
 img.style.marginTop = '-66px';
 img.style.height = '200px';
@@ -38,6 +46,12 @@ document.body.appendChild(img);
   
 var dots = [];
 for (var i = 0; i < 5; i++) {
+  //air pollution 
+  var airImage = document.createElement('img');
+	airImage.src = 'PM2.5Chi.png';
+	airImage.style.display = 'none';
+	document.body.appendChild(airImage);
+  
   var dot = document.createElement('img');
   dot.src = 'https://media.giphy.com/media/S8TPesOR2AFgwiOcLU/giphy.gif';
   dot.style.position = 'absolute';
@@ -47,6 +61,9 @@ for (var i = 0; i < 5; i++) {
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px'
   document.body.appendChild(dot);
+  dot.addEventListener('click', function() {
+  	airImage.style.display = 'block';
+});
   dots.push(dot);
 
 for (var i = 1; i < 5; i++)
@@ -83,6 +100,7 @@ for (var i = 2; i < 5; i++)
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
+ 
   dots.push(dot);
 //Doctor GIF 
 for (var i = 3; i < 5; i++)
