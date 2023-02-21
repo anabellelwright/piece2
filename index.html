@@ -32,6 +32,7 @@ document.body.appendChild(title)
   
 document.body.style.backgroundColor = '#F6F3E7'; 
 
+  //black fetus 
 var img = document.createElement('img');
 img.src = 'black-fetus.png';
 img.style.position = 'absolute';
@@ -42,8 +43,25 @@ img.style.marginLeft = '-120px';
 img.style.marginTop = '-66px';
 img.style.height = '200px';
 document.body.appendChild(img);
-
-
+  
+//disparity stats
+  var statImage = document.createElement('img');
+	statImage.src = 'StatsOverall.png';
+ 	statImage.style.position = 'absolute';
+	statImage.style.left = '20px';
+	statImage.style.top = '50%';
+	statImage.style.marginTop = '-290px';
+  statImage.style.width = '420px';
+  statImage.style.height = '90px';
+	document.body.appendChild(statImage);
+  img.addEventListener('click', function() {
+  statImage.style.display = 'block';
+  statImage.onclick = function() {
+  document.body.removeChild(statImage);
+    };
+  document.body.appendChild(statImage);
+	});
+	
   
 var dots = [];
 for (var i = 0; i < 5; i++) {
