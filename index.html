@@ -51,8 +51,12 @@ for (var i = 0; i < 5; i++) {
 	airImage.src = 'PM2.5Chi.png';
 	airImage.style.display = 'none';
   airImage.style.width = '300px';
-  airImage.style.height = '150px';
+  airImage.style.height = '175px';
 	document.body.appendChild(airImage);
+  airImage.onclick = function() {
+  document.body.removeChild(airImage);
+    };
+    document.body.appendChild(airImage);
   
   var dot = document.createElement('img');
   dot.src = 'https://media.giphy.com/media/S8TPesOR2AFgwiOcLU/giphy.gif';
