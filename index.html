@@ -16,6 +16,7 @@ title.style.textDecoration = 'line-through';
 document.body.appendChild(title)
 
 
+
 // var line = document.createElement('div');
 // line.innerHTML = 'Life';
 // line.style.fontSize = '47px'
@@ -47,17 +48,6 @@ document.body.appendChild(img);
 var dots = [];
 for (var i = 0; i < 5; i++) {
   //air pollution 
-  var airImage = document.createElement('img');
-	airImage.src = 'PM2.5Chi.png';
-	airImage.style.display = 'none';
-  airImage.style.width = '300px';
-  airImage.style.height = '175px';
-	document.body.appendChild(airImage);
-  airImage.onclick = function() {
-  document.body.removeChild(airImage);
-    };
-    document.body.appendChild(airImage);
-  
   var dot = document.createElement('img');
   dot.src = 'https://media.giphy.com/media/S8TPesOR2AFgwiOcLU/giphy.gif';
   dot.style.position = 'absolute';
@@ -67,9 +57,22 @@ for (var i = 0; i < 5; i++) {
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px'
   document.body.appendChild(dot);
+  
+  
+//click to display PM2.5 concentration in Chicago
+  var airImage = document.createElement('img');
+	airImage.src = 'PM2.5Chi.png';
+	airImage.style.display = 'none';
+  airImage.style.width = '300px';
+  airImage.style.height = '175px';
+	document.body.appendChild(airImage);
   dot.addEventListener('click', function() {
-  	airImage.style.display = 'block';
-});
+  airImage.style.display = 'block';
+  airImage.onclick = function() {
+  document.body.removeChild(airImage);
+    };
+  document.body.appendChild(airImage);
+	});
   dots.push(dot);
 
 for (var i = 1; i < 5; i++)
