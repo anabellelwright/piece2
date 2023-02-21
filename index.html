@@ -84,8 +84,8 @@ for (var i = 0; i < 5; i++) {
   var airImage = document.createElement('img');
 	airImage.src = 'PM2.5Chi.png';
  	airImage.style.position = 'absolute';
-	airImage.style.left = '510px';
-	airImage.style.top = '47%';
+	airImage.style.left = '570px';
+	airImage.style.top = '37%';
 	airImage.style.marginTop = '-290px';
   airImage.style.width = '320px';
   airImage.style.height = '180px';
@@ -158,6 +158,22 @@ for (var i = 2; i < 5; i++)
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
  
+  var appointmentsImage = document.createElement('img');
+	appointmentsImage.src = 'appointmentsImage.png';
+ 	appointmentsImage.style.position = 'absolute';
+	appointmentsImage.style.left = '10px';
+	appointmentsImage.style.top = '37%';
+	appointmentsImage.style.marginTop = '0px';
+  appointmentsImage.style.width = '195px';
+  appointmentsImage.style.height = '57px';
+	document.body.appendChild(appointmentsImage);
+  dot.addEventListener('click', function() {
+  appointmentsImage.style.display = 'block';
+  appointmentsImage.onclick = function() {
+  document.body.removeChild(appointmentsImage);
+    };
+  document.body.appendChild(appointmentsImage);
+	});
   dots.push(dot);
 //Doctor GIF 
 for (var i = 3; i < 5; i++)
@@ -175,7 +191,7 @@ for (var i = 3; i < 5; i++)
   var biasImage = document.createElement('img');
 	biasImage.src = 'biasImage.png';
  	biasImage.style.position = 'absolute';
-	biasImage.style.left = '540px';
+	biasImage.style.left = '550px';
 	biasImage.style.top = '87%';
 	biasImage.style.marginTop = '0px';
   biasImage.style.width = '350px';
@@ -212,8 +228,8 @@ setInterval(function() {
   for (var i = 0; i < dots.length; i++) {
     var dot = dots[i];
     var angle = Math.PI * 2 * (i / dots.length) + t;
-    dot.style.left = (50 + Math.cos(angle) * 30) + '%';
-    dot.style.top = (50 + Math.sin(angle) * 30) + '%';
+    dot.style.left = (50 + Math.cos(angle) * 23) + '%';
+    dot.style.top = (50 + Math.sin(angle) * 23) + '%';
   }
   t += 0.006;
 }, 20);
