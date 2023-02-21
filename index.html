@@ -13,9 +13,13 @@
   
   
 <script>
-
 document.body.style.backgroundImage = "url('https://media.giphy.com/media/1wwv6MnSsQwP6/giphy.gif')";
+var desertImage = document.body.style.backgroundImage
   
+
+	desertImage.onclick = function () {
+    
+  }
 
 var title = document.createElement('div');
 title.innerHTML = '"Social Determinants of Health"';
@@ -99,7 +103,7 @@ for (var i = 0; i < 5; i++) {
 	});
   dots.push(dot);
 
-  //
+  //transportation
 for (var i = 1; i < 5; i++)
   var dot = document.createElement('img');
   dot.src = 'https://media.giphy.com/media/3hgjgnD5FcwPbFr9zi/giphy.gif';
@@ -109,7 +113,7 @@ for (var i = 1; i < 5; i++)
   dot.style.position = 'absolute';
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
-  document.body.appendChild(dot);
+  document.body.appendChild(dot);  
   dots.push(dot);
 
   
@@ -158,14 +162,15 @@ for (var i = 2; i < 5; i++)
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
  
+  //Click to view appt info
   var appointmentsImage = document.createElement('img');
 	appointmentsImage.src = 'appointmentsImage.png';
  	appointmentsImage.style.position = 'absolute';
-	appointmentsImage.style.left = '10px';
-	appointmentsImage.style.top = '37%';
+	appointmentsImage.style.left = '6px';
+	appointmentsImage.style.top = '31%';
 	appointmentsImage.style.marginTop = '0px';
-  appointmentsImage.style.width = '195px';
-  appointmentsImage.style.height = '57px';
+  appointmentsImage.style.width = '270px';
+  appointmentsImage.style.height = '60px';
 	document.body.appendChild(appointmentsImage);
   dot.addEventListener('click', function() {
   appointmentsImage.style.display = 'block';
@@ -175,6 +180,7 @@ for (var i = 2; i < 5; i++)
   document.body.appendChild(appointmentsImage);
 	});
   dots.push(dot);
+  
 //Doctor GIF 
 for (var i = 3; i < 5; i++)
   var dot = document.createElement('img');
@@ -187,7 +193,7 @@ for (var i = 3; i < 5; i++)
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
   
-  
+  //doctor bias info
   var biasImage = document.createElement('img');
 	biasImage.src = 'biasImage.png';
  	biasImage.style.position = 'absolute';
@@ -221,6 +227,25 @@ for (var i = 4; i < 5; i++)
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
+  
+  //housing insecurity info
+  var housingImage = document.createElement('img');
+	housingImage.src = 'housingImage.png';
+ 	housingImage.style.position = 'absolute';
+	housingImage.style.left = '6px';
+	housingImage.style.top = '61%';
+	housingImage.style.marginTop = '0px';
+  housingImage.style.width = '240px';
+  housingImage.style.height = '110px';
+	document.body.appendChild(housingImage);
+  dot.addEventListener('click', function() {
+  housingImage.style.display = 'block';
+  housingImage.onclick = function() {
+  document.body.removeChild(housingImage);
+    };
+  document.body.appendChild(housingImage);
+	});
+  
   dots.push(dot);
 }
 var t = 0;
