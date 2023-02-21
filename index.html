@@ -63,8 +63,8 @@ for (var i = 0; i < 5; i++) {
   var airImage = document.createElement('img');
 	airImage.src = 'PM2.5Chi.png';
 	airImage.style.display = 'none';
-  airImage.style.width = '300px';
-  airImage.style.height = '175px';
+  airImage.style.width = '400px';
+  airImage.style.height = '240px';
 	document.body.appendChild(airImage);
   dot.addEventListener('click', function() {
   airImage.style.display = 'block';
@@ -75,6 +75,7 @@ for (var i = 0; i < 5; i++) {
 	});
   dots.push(dot);
 
+  //
 for (var i = 1; i < 5; i++)
   var dot = document.createElement('img');
   dot.src = 'https://media.giphy.com/media/3hgjgnD5FcwPbFr9zi/giphy.gif';
@@ -86,6 +87,8 @@ for (var i = 1; i < 5; i++)
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
   dots.push(dot);
+
+  
 //Food Insecurity GIF
 for (var i = 2; i < 5; i++)
   var dot = document.createElement('img');
@@ -97,7 +100,25 @@ for (var i = 2; i < 5; i++)
   dot.style.backgroundColor = '#000000';
   dot.style.borderRadius = '5px';
   document.body.appendChild(dot);
+
+  
+	//click to display PM2.5 concentration in Chicago
+  var foodImage = document.createElement('img');
+	foodImage.src = 'FoodChi.png';
+	foodImage.style.display = 'none';
+  foodImage.style.width = '400px';
+  foodImage.style.height = '140px';
+	document.body.appendChild(foodImage);
+  dot.addEventListener('click', function() {
+  foodImage.style.display = 'block';
+  foodImage.onclick = function() {
+  document.body.removeChild(foodImage);
+    };
+  document.body.appendChild(foodImage);
+	});
   dots.push(dot);
+  
+  
 //Appointment GIF 
 for (var i = 2; i < 5; i++)
   var dot = document.createElement('img');
