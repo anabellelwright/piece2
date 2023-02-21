@@ -1,3 +1,9 @@
+<style>
+
+
+
+</style>
+
 <body>
 
 
@@ -7,6 +13,9 @@
   
   
 <script>
+
+document.body.style.backgroundImage = "url('https://media.giphy.com/media/1wwv6MnSsQwP6/giphy.gif')";
+  
 
 var title = document.createElement('div');
 title.innerHTML = '"Social Determinants of Health"';
@@ -27,18 +36,12 @@ document.body.appendChild(title)
 // document.body.appendChild(line);
 
 
-  
-  
-  
-document.body.style.backgroundColor = '#F6F3E7'; 
-
   //black fetus 
 var img = document.createElement('img');
 img.src = 'black-fetus.png';
 img.style.position = 'absolute';
 img.style.left = '50%';
 img.style.top = '50%';
-img.style.backgroundColor = '#F6F3E7'; 
 img.style.marginLeft = '-120px';
 img.style.marginTop = '-66px';
 img.style.height = '200px';
@@ -80,9 +83,12 @@ for (var i = 0; i < 5; i++) {
 //click to display PM2.5 concentration in Chicago
   var airImage = document.createElement('img');
 	airImage.src = 'PM2.5Chi.png';
-	airImage.style.display = 'none';
-  airImage.style.width = '400px';
-  airImage.style.height = '240px';
+ 	airImage.style.position = 'absolute';
+	airImage.style.left = '510px';
+	airImage.style.top = '47%';
+	airImage.style.marginTop = '-290px';
+  airImage.style.width = '320px';
+  airImage.style.height = '180px';
 	document.body.appendChild(airImage);
   dot.addEventListener('click', function() {
   airImage.style.display = 'block';
@@ -123,9 +129,12 @@ for (var i = 2; i < 5; i++)
 	//click to display PM2.5 concentration in Chicago
   var foodImage = document.createElement('img');
 	foodImage.src = 'FoodChi.png';
-	foodImage.style.display = 'none';
-  foodImage.style.width = '400px';
-  foodImage.style.height = '140px';
+ 	foodImage.style.position = 'absolute';
+	foodImage.style.left = '2px';
+	foodImage.style.top = '118%';
+	foodImage.style.marginTop = '-290px';
+  foodImage.style.width = '260px';
+  foodImage.style.height = '120px';
 	document.body.appendChild(foodImage);
   dot.addEventListener('click', function() {
   foodImage.style.display = 'block';
